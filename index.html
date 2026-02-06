@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Nugraha Ramadhany</title>
+
+    <!-- CSS External-->
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- Tailwind -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!--Header Content-->
+    <header> 
+        <h1 class="text-2xl font-bold pb-5">Todo List - Nugraha Ramadhany</h1>
+    </header>
+
+    <!-- Main Content -->
+     <main>
+         <!-- Form Section -->
+        <section>
+            <form>
+                <!-- Todo Input -->
+                <input class="border p-2 rounded" type="text" id="todo-input" placeholder="Enter a new task">
+
+                <!-- Date Input -->
+                <input class="border p-2 rounded" type="date" id="todo-date" placeholder="Enter due date">
+            </form>
+
+            <!-- Add Button -->
+            <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onclick="addTodo()" type="button">Add
+                Task</button>
+        </section>
+
+        <!-- Action Section -->
+        <section class="flex pt-2 justify-between items-center gap-2">
+            <!-- Clear All Button -->
+            <button class="border rounded p-2 bg-red-500 text-white" onclick="deleteAllTodos()">Clear All Tasks</button>
+
+            <!-- Filter Section -->
+            <div class="flex items-center gap-2">
+                <input class="border p-2 rounded" type="month" id="filter-month" placeholder="Filter by month">
+                <button class="border rounded p-2 bg-green-500 text-white" onclick="filterTodosByMonth()">Filter by Month</button>
+                <button class="border rounded p-2 bg-gray-500 text-white" onclick="showAllTodos()">Show All</button>
+            </div>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Tasks</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <!-- Todo items will be dynamically added here -->
+                <li>No tasks available</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Footer Content -->
+     <footer>
+        <p class="text-center font-bold text-gray-500 pt-10">©2026 Rama's Todo List App</p>
+     </footer>
+
+    <!-- JavaScript External -->
+    <script src="js\index.js"></script>
+    
+</body>
+</html>
